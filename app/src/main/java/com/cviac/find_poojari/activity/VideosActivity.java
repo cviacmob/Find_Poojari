@@ -24,6 +24,7 @@ public class VideosActivity extends AppCompatActivity implements AdapterView.OnI
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_videos);
+        setTitle("Videos");
         loadvideos();
         VideoinfoAdapter adapter = new VideoinfoAdapter(VideosActivity.this, videoslist);
         lv=(ListView) findViewById(R.id.vidlist);

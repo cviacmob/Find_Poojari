@@ -24,6 +24,7 @@ public class PhotosActivity extends AppCompatActivity implements AdapterView.OnI
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_photos);
+        setTitle("Photos");
         loadImages();
 
         PhotoinfoAdapter adapter = new PhotoinfoAdapter(PhotosActivity.this, photolist);

@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setTitle("Pooja Services");
         loadServices();
 
         ServiceinfoAdapter adapter = new ServiceinfoAdapter(MainActivity.this,R.layout.grid_single,root.getSublist());

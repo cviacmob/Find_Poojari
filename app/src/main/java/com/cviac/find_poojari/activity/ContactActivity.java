@@ -20,6 +20,7 @@ public class ContactActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact);
+        setTitle("Contact Us");
 
         button = (Button) findViewById(R.id.button1);
         button.setOnClickListener(new View.OnClickListener() {
