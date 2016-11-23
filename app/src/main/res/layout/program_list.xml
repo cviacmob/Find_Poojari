@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/program_list"
     android:layout_width="match_parent"
@@ -18,8 +19,8 @@
         android:id="@+id/servicetext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="10sp"
-        android:layout_marginTop="37.5dp"
+        android:textSize="12sp"
+        android:layout_marginTop="35dp"
         android:layout_toRightOf="@+id/serviceimage"/>
 
 </RelativeLayout>
