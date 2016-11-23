@@ -12,16 +12,15 @@ import com.cviac.find_poojari.datamodel.ServiceInfo;
 import java.util.List;
 
 public class SubserviceActivity extends AppCompatActivity {
-    List<ServiceInfo> list;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_subservice);
-//        ServiceInfo tit=list.get();
-//        setTitle(tit.getServiceNAME());
 
         Intent i=getIntent();
         ServiceInfo child= (ServiceInfo) i.getSerializableExtra("child");
+        setTitle(child.getServiceNAME());
 
 
         ServiceinfoAdapter adapter;

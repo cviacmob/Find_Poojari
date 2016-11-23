@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -20,6 +21,7 @@ public class ContactActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setTitle("Contact Us");
 
         button = (Button) findViewById(R.id.button1);
@@ -41,5 +43,11 @@ public class ContactActivity extends AppCompatActivity {
                 startActivity(callIntent);
             }
         });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        onBackPressed();
+        return true;
     }
 }

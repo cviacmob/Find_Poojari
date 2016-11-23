@@ -46,6 +46,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
+
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 

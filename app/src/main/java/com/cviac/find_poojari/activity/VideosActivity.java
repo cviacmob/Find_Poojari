@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -24,6 +25,7 @@ public class VideosActivity extends AppCompatActivity implements AdapterView.OnI
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_videos);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setTitle("Videos");
         loadvideos();
         VideoinfoAdapter adapter = new VideoinfoAdapter(VideosActivity.this, videoslist);
@@ -38,6 +40,12 @@ public class VideosActivity extends AppCompatActivity implements AdapterView.OnI
         Uri uri = Uri.parse(vinfo.getYtubeURL());
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        onBackPressed();
+        return true;
     }
     private void loadvideos()
     {

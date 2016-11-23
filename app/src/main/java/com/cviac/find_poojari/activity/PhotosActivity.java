@@ -3,6 +3,7 @@ package com.cviac.find_poojari.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -26,6 +27,8 @@ public class PhotosActivity extends AppCompatActivity implements AdapterView.OnI
         setContentView(R.layout.activity_photos);
         setTitle("Photos");
         loadImages();
+//        getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         PhotoinfoAdapter adapter = new PhotoinfoAdapter(PhotosActivity.this, photolist);
         lv=(ListView) findViewById(R.id.listphoto);
@@ -41,6 +44,12 @@ public class PhotosActivity extends AppCompatActivity implements AdapterView.OnI
         Intent ssa = new Intent(PhotosActivity.this,FullviewActivity.class);
         ssa.putExtra("pinfo",pinfo);
         startActivity(ssa);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        onBackPressed();
+        return true;
     }
 
     private void loadImages()
