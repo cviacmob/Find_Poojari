@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cviac.find_poojari">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:name="com.cviac.find_poojari.PoojariApp"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.cviac.find_poojari.activity.Splashscreen"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.cviac.find_poojari.activity.RegistrationActivity" />
+        <activity
+            android:name="com.cviac.find_poojari.activity.MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name="com.cviac.find_poojari.activity.PhotosActivity" />
+        <activity android:name="com.cviac.find_poojari.activity.VideosActivity" />
+        <activity android:name="com.cviac.find_poojari.activity.ContactActivity" />
+        <activity android:name="com.cviac.find_poojari.activity.SubserviceActivity" />
+        <activity android:name="com.cviac.find_poojari.activity.FullviewActivity"></activity>
+    </application>
+
+</manifest>
