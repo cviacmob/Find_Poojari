@@ -54,7 +54,6 @@ public class PhotosActivity extends AppCompatActivity implements AdapterView.OnI
 
     private void loadImages()
     {
-
         photolist=new ArrayList<>();
 
         PhotoInfo inf1= new PhotoInfo(R.mipmap.one);

@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.widget.GridView;
 import android.widget.*;
 
+import com.cviac.find_poojari.Prefs;
 import com.cviac.find_poojari.adapter.ServiceinfoAdapter;
 import com.cviac.find_poojari.R;
 import com.cviac.find_poojari.datamodel.ServiceInfo;
@@ -27,6 +28,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
         setTitle("Pooja Services");
         loadServices();
 
@@ -46,8 +50,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
-
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -59,6 +61,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        setUserdetails(navigationView);
+    }
+    private void setUserdetails(NavigationView navigationView){
+        View hview=navigationView.getHeaderView(0);
+        TextView un=(TextView) hview.findViewById(R.id.uname);
+        TextView um=(TextView) hview.findViewById(R.id.umail);
+
+        String name=Prefs.getString("Name","");
+        String mail=Prefs.getString("Email","");
+
+        un.setText(name);
+        um.setText(mail);
+
     }
 
     @Override
@@ -86,9 +101,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+//        if (id == R.id.action_settings) {
+//            return true;
+//        }
 
         return super.onOptionsItemSelected(item);
     }

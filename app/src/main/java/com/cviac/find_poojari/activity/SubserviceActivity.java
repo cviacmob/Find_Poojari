@@ -27,6 +27,5 @@ public class SubserviceActivity extends AppCompatActivity {
         adapter= new ServiceinfoAdapter(SubserviceActivity.this,R.layout.program_list,child.getSublist());
         final ListView lv = (ListView) findViewById(R.id.subservicelist);
         lv.setAdapter(adapter);
-
     }
 }
