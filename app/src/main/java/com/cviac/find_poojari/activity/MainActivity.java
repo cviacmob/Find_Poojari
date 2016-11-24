@@ -29,8 +29,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
         setTitle("Pooja Services");
         loadServices();
 
@@ -63,6 +61,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setNavigationItemSelectedListener(this);
         setUserdetails(navigationView);
     }
+
     private void setUserdetails(NavigationView navigationView){
         View hview=navigationView.getHeaderView(0);
         TextView un=(TextView) hview.findViewById(R.id.uname);
@@ -73,7 +72,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         un.setText(name);
         um.setText(mail);
-
     }
 
     @Override

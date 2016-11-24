@@ -80,6 +80,6 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:background="@mipmap/call"/>
+        android:background="@mipmap/call_us"/>
 
 </RelativeLayout>
