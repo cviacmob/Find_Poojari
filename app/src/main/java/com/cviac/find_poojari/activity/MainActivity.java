@@ -65,13 +65,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private void setUserdetails(NavigationView navigationView){
         View hview=navigationView.getHeaderView(0);
         TextView un=(TextView) hview.findViewById(R.id.uname);
-        TextView um=(TextView) hview.findViewById(R.id.umail);
+        TextView um=(TextView) hview.findViewById(R.id.uphne);
 
         String name=Prefs.getString("Name","");
-        String mail=Prefs.getString("Email","");
+        String phne=Prefs.getString("Mobile Number","");
 
         un.setText(name);
-        um.setText(mail);
+        um.setText(phne);
     }
 
     @Override

@@ -28,7 +28,7 @@
         android:id="@+id/uname" />
 
     <TextView
-        android:id="@+id/umail"
+        android:id="@+id/uphne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="android.studio@android.com" />
