@@ -147,7 +147,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ServiceInfo ch1=new ServiceInfo(R.mipmap.grid,"SMARTHAM");
         root.add(ch1);
 
-        ServiceInfo ch11=new ServiceInfo(R.mipmap.grid,"MARRIAGE");
+        ServiceInfo ch11=new ServiceInfo(R.mipmap.marg,"MARRIAGE");
         ch1.add(ch11);
         ServiceInfo ch12=new ServiceInfo(R.mipmap.grid,"UPANAYANAM");
         ch1.add(ch12);
@@ -155,15 +155,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ch1.add(ch13);
         ServiceInfo ch14=new ServiceInfo(R.mipmap.grid,"ANNAPRASANA");
         ch1.add(ch14);
-        ServiceInfo ch15=new ServiceInfo(R.mipmap.grid,"GRUHAPRAVESHAM");
+        ServiceInfo ch15=new ServiceInfo(R.mipmap.gruhapravesam,"GRUHAPRAVESHAM");
         ch1.add(ch15);
-        ServiceInfo ch16=new ServiceInfo(R.mipmap.grid,"VAASTHU POOJA");
+        ServiceInfo ch16=new ServiceInfo(R.mipmap.vaasthu,"VAASTHU POOJA");
         ch1.add(ch16);
-        ServiceInfo ch17=new ServiceInfo(R.mipmap.grid,"GANAPTHI HOMAM");
+        ServiceInfo ch17=new ServiceInfo(R.mipmap.homam,"GANAPTHI HOMAM");
         ch1.add(ch17);
-        ServiceInfo ch18=new ServiceInfo(R.mipmap.grid,"RUDRA HOMAM");
+        ServiceInfo ch18=new ServiceInfo(R.mipmap.rudrahomam,"RUDRA HOMAM");
         ch1.add(ch18);
-        ServiceInfo ch19=new ServiceInfo(R.mipmap.grid,"AYUSH HOMAM ");
+        ServiceInfo ch19=new ServiceInfo(R.mipmap.ayushhomam,"AYUSH HOMAM ");
         ch1.add(ch19);
         ServiceInfo ch110=new ServiceInfo(R.mipmap.grid,"MONTHLY /ANNUAL CERMONIES(ABDIKAM)");
         ch1.add(ch110);
@@ -237,7 +237,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ch6.add(ch66);
         ServiceInfo ch67=new ServiceInfo(R.mipmap.grid,"ARCHAKATVAM");
         ch6.add(ch67);
-        ServiceInfo ch68=new ServiceInfo(R.mipmap.grid,"CATERING");
+        ServiceInfo ch68=new ServiceInfo(R.mipmap.grid,"CATERING-Small Gathering");
         ch6.add(ch68);
+        ServiceInfo ch69=new ServiceInfo(R.mipmap.grid,"CATERING-Large Gathering");
+        ch6.add(ch69);
     }
 }

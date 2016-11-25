@@ -54,10 +54,13 @@ public class PhotoinfoAdapter extends BaseAdapter {
             pho = inflater.inflate(R.layout.photolist_item, null);
             holder = new ViewHolder();
             holder.iv = (ImageView) pho.findViewById(R.id.phimage);
-            holder.iv.setImageResource(pinfo.getPhoto_pics());
+            pho.setTag(holder);
+
         } else {
             holder=(ViewHolder)pho.getTag();
         }
+
+        holder.iv.setImageResource(pinfo.getPhoto_pics());
         return pho;
     }
 }

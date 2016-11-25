@@ -28,15 +28,18 @@ public class ServiceinfoAdapter extends BaseAdapter {
 
     }
 
-    public int getCount() {
+    public int getCount()
+    {
         return list.size();
     }
 
-    public Object getItem(int position) {
+    public Object getItem(int position)
+    {
         return position;
     }
 
-    public long getItemId(int position) {
+    public long getItemId(int position)
+    {
         return position;
     }
 
@@ -58,11 +61,13 @@ public class ServiceinfoAdapter extends BaseAdapter {
             holder = new ViewHolder();
             holder.tv = (TextView) ins.findViewById(R.id.servicetext);
             holder.iv = (ImageView) ins.findViewById(R.id.serviceimage);
-            holder.tv.setText(sinfo.getServiceNAME());
-            holder.iv.setImageResource(sinfo.getImgID());
+            ins.setTag(holder);
+
         } else {
             holder=(ViewHolder)ins.getTag();
         }
+        holder.tv.setText(sinfo.getServiceNAME());
+        holder.iv.setImageResource(sinfo.getImgID());
         return ins;
     }
 }

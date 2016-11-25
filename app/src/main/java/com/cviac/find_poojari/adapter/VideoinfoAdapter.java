@@ -53,10 +53,12 @@ public class VideoinfoAdapter extends BaseAdapter {
             vid = inflater.inflate(R.layout.photolist_item, null);
             holder = new ViewHolder();
             holder.iv = (ImageView) vid.findViewById(R.id.phimage);
-            holder.iv.setImageResource(vinfo.getPhotoID());
+            vid.setTag(holder);
         } else {
             holder=(ViewHolder)vid.getTag();
         }
+
+        holder.iv.setImageResource(vinfo.getPhotoID());
         return vid;
     }
 }
