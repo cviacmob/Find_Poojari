@@ -34,8 +34,8 @@ public class Splashscreen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-				/*
-				 * if user reg test is true on oncreate then redirect the user
+                /*
+                 * if user reg test is true on oncreate then redirect the user
 				 * to home page
 				 */
 

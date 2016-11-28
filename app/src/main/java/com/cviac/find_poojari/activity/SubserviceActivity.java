@@ -23,22 +23,23 @@ public class SubserviceActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        Intent i=getIntent();
-        ServiceInfo child= (ServiceInfo) i.getSerializableExtra("child");
+        Intent i = getIntent();
+        ServiceInfo child = (ServiceInfo) i.getSerializableExtra("child");
         setTitle(child.getServiceNAME());
 
         ServiceinfoAdapter adapter;
-        adapter= new ServiceinfoAdapter(SubserviceActivity.this,R.layout.program_list,child.getSublist());
+        adapter = new ServiceinfoAdapter(SubserviceActivity.this, R.layout.program_list, child.getSublist());
         final ListView lv = (ListView) findViewById(R.id.subservicelist);
         lv.setAdapter(adapter);
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent det=new Intent(SubserviceActivity.this,ServicedetailsActivity.class);
+                Intent det = new Intent(SubserviceActivity.this, ServicedetailsActivity.class);
                 startActivity(det);
             }
         });
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         onBackPressed();

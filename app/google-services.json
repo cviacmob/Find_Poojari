@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "127241135126",
+    "firebase_url": "https://poojariconnect.firebaseio.com",
+    "project_id": "poojariconnect",
+    "storage_bucket": "poojariconnect.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:127241135126:android:fb6b1ba220ae57d4",
+        "android_client_info": {
+          "package_name": "com.cviac.find_poojari"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "127241135126-8q2vef68lu73dg2ig0s6hnuf95rn311q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFcuhkc_GcXE5b_9vRWhEChtIuDeMJDYc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
