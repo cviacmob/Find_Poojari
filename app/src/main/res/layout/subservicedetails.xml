@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/serviceimage"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="center" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/clc"
+        android:layout_toRightOf="@+id/servicetext"
+        android:layout_alignTop="@+id/servicetext"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/clickimage"
+        android:layout_alignBottom="@+id/servicetext" />
+
+    <TextView
+        android:id="@+id/servicetext"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/serviceimage"
+        android:layout_toEndOf="@+id/serviceimage" />
+
+</RelativeLayout>

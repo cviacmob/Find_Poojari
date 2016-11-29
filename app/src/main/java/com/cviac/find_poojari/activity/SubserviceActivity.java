@@ -10,6 +10,7 @@ import android.widget.ListView;
 
 import com.cviac.find_poojari.R;
 import com.cviac.find_poojari.adapter.ServiceinfoAdapter;
+import com.cviac.find_poojari.adapter.SubservicesAdapter;
 import com.cviac.find_poojari.datamodel.ServiceInfo;
 
 import java.util.List;
@@ -27,8 +28,8 @@ public class SubserviceActivity extends AppCompatActivity {
         ServiceInfo child = (ServiceInfo) i.getSerializableExtra("child");
         setTitle(child.getServiceNAME());
 
-        ServiceinfoAdapter adapter;
-        adapter = new ServiceinfoAdapter(SubserviceActivity.this, R.layout.program_list, child.getSublist());
+        SubservicesAdapter adapter;
+        adapter = new SubservicesAdapter(SubserviceActivity.this, child.getSublist());
         final ListView lv = (ListView) findViewById(R.id.subservicelist);
         lv.setAdapter(adapter);
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {

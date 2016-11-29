@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setTitle("Pooja Services");
         loadServices();
 
-        ServiceinfoAdapter adapter = new ServiceinfoAdapter(MainActivity.this, R.layout.grid_single, root.getSublist());
+        ServiceinfoAdapter adapter = new ServiceinfoAdapter(MainActivity.this,root.getSublist());
         grid = (GridView) findViewById(R.id.gridview12);
         grid.setAdapter(adapter);
         grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {

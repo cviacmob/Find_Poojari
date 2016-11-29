@@ -4,112 +4,84 @@
     android:id="@+id/activity_registration"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:padding="5dp"
     tools:context="com.cviac.find_poojari.activity.RegistrationActivity">
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout1"
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"
+        android:padding="5dp"
+        android:id="@+id/name">
 
         <EditText
             android:id="@+id/namebox"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="28dp"
-            android:ems="10"
-            android:hint="Enter Name"
-            android:inputType="text">
+            android:inputType="text"
+            android:hint="Name" />
+    </android.support.design.widget.TextInputLayout>
 
-            <requestFocus />
-        </EditText>
-
-        <TextView
-            android:id="@+id/mobile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/namebox"
-            android:layout_marginLeft="14dp"
-            android:layout_marginTop="25dp"
-            android:text="Mobile:" />
-
-        <TextView
-            android:id="@+id/name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignRight="@+id/email"
-            android:text="Name:" />
-
-        <TextView
-            android:id="@+id/email"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/mobile"
-            android:layout_centerVertical="true"
-            android:text="Email:" />
-
-        <EditText
-            android:id="@+id/mailbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/phonebox"
-            android:layout_below="@+id/email"
-            android:layout_marginTop="15dp"
-            android:ems="10"
-            android:hint="Enter Email id"
-            android:inputType="textEmailAddress" />
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:id="@+id/phone"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name">
 
         <EditText
             android:id="@+id/phonebox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/namebox"
-            android:layout_below="@+id/mobile"
-            android:layout_marginTop="22dp"
-            android:ems="10"
-            android:hint="Enter 10-digit Mobile No."
-            android:inputType="number" />
-
-        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/mailbox"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="18dp">
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Mobile Number" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phone"
+        android:id="@+id/mail">
 
-            <TextView
-                android:id="@+id/city"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="19dp"
-                android:text="City:" />
+        <EditText
+            android:id="@+id/mailbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="E-Mail ID" />
+    </android.support.design.widget.TextInputLayout>
 
-            <Spinner
-                android:id="@+id/spinner1"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@+id/city" />
-
-        </RelativeLayout>
-    </RelativeLayout>
-
-    <Button
-        android:id="@+id/Registerbutton"
+    <TextView
+        android:text="CITY"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/relativeLayout1"
-        android:layout_centerHorizontal="true"
-        android:text="Register" />
+        android:padding="5dp"
+        android:id="@+id/textView"
+        android:textSize="17sp"
+        android:layout_below="@+id/mail"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="5dp" />
+
+    <Button
+        android:text="Register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:padding="5dp"
+        android:id="@+id/Registerbutton"
+        android:layout_below="@+id/spinner1"
+        android:layout_centerHorizontal="true" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:id="@+id/spinner1"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_alignTop="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

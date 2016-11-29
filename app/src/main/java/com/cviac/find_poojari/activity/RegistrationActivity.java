@@ -1,5 +1,6 @@
 package com.cviac.find_poojari.activity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -27,6 +28,7 @@ public class RegistrationActivity extends AppCompatActivity {
     private int s_pos;
     Button reg;
     EditText name, phone, mail;
+    ProgressDialog progressDialog=null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,6 +100,8 @@ public class RegistrationActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),
                             "Choose Different City", Toast.LENGTH_LONG).show();
                 }
+
+
             }
         });
     }
@@ -111,12 +115,22 @@ public class RegistrationActivity extends AppCompatActivity {
         updateValues.put("city", city);
         updateValues.put("createdOn", new Date().toString());
 
+        progressDialog = new ProgressDialog(RegistrationActivity.this,
+                R.style.AppTheme_Dark_Dialog);
+        progressDialog.setIndeterminate(true);
+        progressDialog.setMessage("Registering...");
+        progressDialog.show();
+
         DatabaseReference dbref = FirebaseDatabase.getInstance().getReference().child("registration");
         dbref.child(mobile_number).updateChildren(
                 updateValues,
                 new DatabaseReference.CompletionListener() {
                     @Override
                     public void onComplete(DatabaseError firebaseError, DatabaseReference databaseReference) {
+
+                        if(progressDialog!=null){
+                            progressDialog.dismiss();
+                        }
                         if (firebaseError != null) {
                             Toast.makeText(RegistrationActivity.this,
                                     "Registration Failed: " + firebaseError.getMessage(),
