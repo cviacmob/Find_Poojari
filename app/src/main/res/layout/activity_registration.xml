@@ -9,12 +9,13 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.cviac.find_poojari.activity.RegistrationActivity">
+
     <RelativeLayout
         android:id="@+id/relativeLayout1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" >
+        android:layout_centerHorizontal="true">
 
         <EditText
             android:id="@+id/namebox"
@@ -24,7 +25,7 @@
             android:layout_marginTop="28dp"
             android:ems="10"
             android:hint="Enter Name"
-            android:inputType="text" >
+            android:inputType="text">
 
             <requestFocus />
         </EditText>
@@ -82,7 +83,7 @@
             android:layout_height="match_parent"
             android:layout_below="@+id/mailbox"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="18dp" >
+            android:layout_marginTop="18dp">
 
             <TextView
                 android:id="@+id/city"

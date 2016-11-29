@@ -42,8 +42,7 @@ public class RegistrationActivity extends AppCompatActivity {
                 "Bangalore", "Kolkatta", "Mumbai", "New Delhi"};
 
         Spinner s = (Spinner) findViewById(R.id.spinner1);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item, arraySpinnervalues);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, arraySpinnervalues);
         s.setAdapter(adapter);
         s.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
