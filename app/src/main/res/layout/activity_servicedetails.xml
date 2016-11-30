@@ -34,5 +34,5 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:id="@+id/servccall"
-        android:background="@mipmap/call_us" />
+        android:background="@mipmap/callus" />
 </RelativeLayout>

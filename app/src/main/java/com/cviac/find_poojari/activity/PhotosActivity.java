@@ -52,21 +52,25 @@ public class PhotosActivity extends AppCompatActivity implements AdapterView.OnI
     private void loadImages() {
         photolist = new ArrayList<>();
 
-        PhotoInfo inf1 = new PhotoInfo(R.mipmap.pha);
+        PhotoInfo inf1 = new PhotoInfo(R.mipmap.one);
         photolist.add(inf1);
-        PhotoInfo inf2 = new PhotoInfo(R.mipmap.phb);
+        PhotoInfo inf2 = new PhotoInfo(R.mipmap.two);
         photolist.add(inf2);
-        PhotoInfo inf3 = new PhotoInfo(R.mipmap.phc);
+        PhotoInfo inf3 = new PhotoInfo(R.mipmap.three);
         photolist.add(inf3);
-        PhotoInfo inf4 = new PhotoInfo(R.mipmap.phd);
+        PhotoInfo inf4 = new PhotoInfo(R.mipmap.four);
         photolist.add(inf4);
-        PhotoInfo inf5 = new PhotoInfo(R.mipmap.phe);
+        PhotoInfo inf5 = new PhotoInfo(R.mipmap.five);
         photolist.add(inf5);
-        PhotoInfo inf6 = new PhotoInfo(R.mipmap.phf);
+        PhotoInfo inf6 = new PhotoInfo(R.mipmap.six);
         photolist.add(inf6);
-        PhotoInfo inf7 = new PhotoInfo(R.mipmap.phg);
+        PhotoInfo inf7 = new PhotoInfo(R.mipmap.seven);
         photolist.add(inf7);
-        PhotoInfo inf8 = new PhotoInfo(R.mipmap.phh);
+        PhotoInfo inf8 = new PhotoInfo(R.mipmap.eight);
         photolist.add(inf8);
+        PhotoInfo inf9 = new PhotoInfo(R.mipmap.nine);
+        photolist.add(inf9);
+        PhotoInfo inf10 = new PhotoInfo(R.mipmap.ten);
+        photolist.add(inf10);
     }
 }
