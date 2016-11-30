@@ -3,11 +3,17 @@ package com.cviac.find_poojari;
 import android.app.Application;
 import android.content.ContextWrapper;
 
-/**
- * Created by User on 11/23/2016.
- */
-
 public class PoojariApp extends Application {
+
+    private boolean networkStatus = true;
+
+    public boolean isNetworkStatus() {
+        return networkStatus;
+    }
+
+    public void setNetworkStatus(boolean networkStatus) {
+        this.networkStatus = networkStatus;
+    }
 
     @Override
     public void onCreate() {

@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.cviac.find_poojari.PoojariApp;
 import com.cviac.find_poojari.Prefs;
 import com.cviac.find_poojari.R;
 import com.google.firebase.database.DatabaseError;
@@ -28,12 +29,14 @@ public class RegistrationActivity extends AppCompatActivity {
     private int s_pos;
     Button reg;
     EditText name, phone, mail;
-    ProgressDialog progressDialog=null;
+    ProgressDialog progressDialog = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
+
+        setTitle("Register");
 
         reg = (Button) findViewById(R.id.Registerbutton);
         name = (EditText) findViewById(R.id.namebox);
@@ -63,9 +66,6 @@ public class RegistrationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String name1 = name.getText().toString();
-                String phone1 = phone.getText().toString();
-                String mail1 = mail.getText().toString();
 
                 if (name.length() < 1) {
                     name.setError("Enter name to proceed");
@@ -85,23 +85,32 @@ public class RegistrationActivity extends AppCompatActivity {
                             "Enter valid E-mail ID", Toast.LENGTH_LONG).show();
                     return;
                 }
-                if (s_pos == 0) {
-
-                    String city = arraySpinnervalues[s_pos];
-                    Prefs.edit();
-                    Prefs.putString("Name", name1);
-                    Prefs.putString("Mobile Number", phone1);
-                    Prefs.putString("Email", mail1);
-                    Prefs.putString("City", city);
-                    Prefs.putString("isregistered", "true");
-                    registeruser(name1, phone1, mail1, city);
-
-                } else {
+                if (s_pos != 0) {
                     Toast.makeText(getApplicationContext(),
                             "Choose Different City", Toast.LENGTH_LONG).show();
                 }
+                if (s_pos == 0) {
 
+                    PoojariApp app = (PoojariApp) RegistrationActivity.this.getApplication();
 
+                    if (app.isNetworkStatus()) {
+                        String name1 = name.getText().toString();
+                        String phone1 = phone.getText().toString();
+                        String mail1 = mail.getText().toString();
+                        String city = arraySpinnervalues[s_pos];
+
+                        Prefs.edit();
+                        Prefs.putString("Name", name1);
+                        Prefs.putString("Mobile Number", phone1);
+                        Prefs.putString("Email", mail1);
+                        Prefs.putString("City", city);
+
+                        registeruser(name1, phone1, mail1, city);
+                    } else {
+                        Toast.makeText(getApplicationContext(),
+                                "Please Check Your Internet Connection and try again", Toast.LENGTH_LONG).show();
+                    }
+                }
             }
         });
     }
@@ -128,7 +137,7 @@ public class RegistrationActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(DatabaseError firebaseError, DatabaseReference databaseReference) {
 
-                        if(progressDialog!=null){
+                        if (progressDialog != null) {
                             progressDialog.dismiss();
                         }
                         if (firebaseError != null) {
@@ -138,6 +147,8 @@ public class RegistrationActivity extends AppCompatActivity {
                         } else {
                             Toast.makeText(getApplicationContext(),
                                     "Registeration Successful", Toast.LENGTH_LONG).show();
+
+                            Prefs.putString("isregistered", "true");
 
                             Intent in1 = new Intent(RegistrationActivity.this,
                                     MainActivity.class);
