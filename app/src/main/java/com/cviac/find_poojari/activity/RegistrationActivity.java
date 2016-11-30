@@ -22,6 +22,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class RegistrationActivity extends AppCompatActivity {
 
@@ -29,6 +31,8 @@ public class RegistrationActivity extends AppCompatActivity {
     private int s_pos;
     Button reg;
     EditText name, phone, mail;
+    String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+    String validmail;
     ProgressDialog progressDialog = null;
 
     @Override
@@ -44,9 +48,9 @@ public class RegistrationActivity extends AppCompatActivity {
         mail = (EditText) findViewById(R.id.mailbox);
 
         this.arraySpinnervalues = new String[]{"Hyderabad", "Chennai",
-                "Bangalore", "Kolkatta", "Mumbai", "New Delhi"};
+                "Bangalore"};
 
-        Spinner s = (Spinner) findViewById(R.id.spinner1);
+        final Spinner s = (Spinner) findViewById(R.id.spinner1);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, arraySpinnervalues);
         s.setAdapter(adapter);
         s.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -66,6 +70,10 @@ public class RegistrationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                String name1 = name.getText().toString();
+                String phone1 = phone.getText().toString();
+                String mail1 = mail.getText().toString();
+                String city = arraySpinnervalues[s_pos];
 
                 if (name.length() < 1) {
                     name.setError("Enter name to proceed");
@@ -79,8 +87,8 @@ public class RegistrationActivity extends AppCompatActivity {
                             "Enter valid Mobile No.", Toast.LENGTH_LONG).show();
                     return;
                 }
-                if (mail.length() < 1) {
-                    mail.setError("Enter Email-id to proceed");
+                if (!isValidEmail(mail1)) {
+                    mail.setError("Enter Valid Email-id to proceed");
                     Toast.makeText(getApplicationContext(),
                             "Enter valid E-mail ID", Toast.LENGTH_LONG).show();
                     return;
@@ -94,10 +102,7 @@ public class RegistrationActivity extends AppCompatActivity {
                     PoojariApp app = (PoojariApp) RegistrationActivity.this.getApplication();
 
                     if (app.isNetworkStatus()) {
-                        String name1 = name.getText().toString();
-                        String phone1 = phone.getText().toString();
-                        String mail1 = mail.getText().toString();
-                        String city = arraySpinnervalues[s_pos];
+
 
                         Prefs.edit();
                         Prefs.putString("Name", name1);
@@ -115,7 +120,7 @@ public class RegistrationActivity extends AppCompatActivity {
         });
     }
 
-    private void registeruser(String name, String mobile_number, String email, String city) {
+    private void registeruser(String name, String mobile_number, String email, final String city) {
 
         Map<String, Object> updateValues = new HashMap<>();
         updateValues.put("name", name);
@@ -128,6 +133,7 @@ public class RegistrationActivity extends AppCompatActivity {
                 R.style.AppTheme_Dark_Dialog);
         progressDialog.setIndeterminate(true);
         progressDialog.setMessage("Registering...");
+        progressDialog.setCancelable(false);
         progressDialog.show();
 
         DatabaseReference dbref = FirebaseDatabase.getInstance().getReference().child("registration");
@@ -157,5 +163,16 @@ public class RegistrationActivity extends AppCompatActivity {
                         }
                     }
                 });
+    }
+
+    protected boolean isValidEmail(String email) {
+        // TODO Auto-generated method stub
+
+        String EMAILPATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+                + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
+
+        Pattern pattern = Pattern.compile(EMAILPATTERN);
+        Matcher matcher = pattern.matcher(email);
+        return matcher.matches();
     }
 }

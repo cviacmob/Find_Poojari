@@ -12,11 +12,29 @@
 
     <GridView
             android:id="@+id/gridview12"
+            android:layout_below="@+id/disp_city"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center"
-            android:horizontalSpacing="0.4dp"
-            android:verticalSpacing="0.4dp"
             android:numColumns="auto_fit"/>
+
+    <TextView
+        android:text="Text View"
+        android:id="@+id/disp_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="17sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="22dp"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/pencilbox"
+        android:id="@+id/imageButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/disp_city"
+        android:layout_alignBottom="@+id/disp_city"/>
 
 </RelativeLayout>

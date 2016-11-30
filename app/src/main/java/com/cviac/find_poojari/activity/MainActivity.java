@@ -22,6 +22,7 @@ import com.cviac.find_poojari.datamodel.ServiceInfo;
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     GridView grid;
+    TextView disp;
     ServiceInfo root;
 
     @Override
@@ -33,6 +34,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         loadServices();
 
         ServiceinfoAdapter adapter = new ServiceinfoAdapter(MainActivity.this,root.getSublist());
+
+        String dispcit=Prefs.getString("City","");
+        disp = (TextView) findViewById(R.id.disp_city);
+        disp.setText(dispcit);
+
         grid = (GridView) findViewById(R.id.gridview12);
         grid.setAdapter(adapter);
         grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
