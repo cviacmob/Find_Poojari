@@ -25,7 +25,7 @@ public class SubserviceActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Intent i = getIntent();
-        ServiceInfo child = (ServiceInfo) i.getSerializableExtra("child");
+       final ServiceInfo child = (ServiceInfo) i.getSerializableExtra("child");
         setTitle(child.getServiceNAME());
 
         SubservicesAdapter adapter;
@@ -35,7 +35,9 @@ public class SubserviceActivity extends AppCompatActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                ServiceInfo info= child.getSublist().get(i);
                 Intent det = new Intent(SubserviceActivity.this, ServicedetailsActivity.class);
+                det.putExtra("Serviceinfo",info);
                 startActivity(det);
             }
         });

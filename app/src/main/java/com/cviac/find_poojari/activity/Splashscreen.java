@@ -44,6 +44,7 @@ public class Splashscreen extends AppCompatActivity {
                     Intent send = new Intent(getApplicationContext(),
                             MainActivity.class);
                     startActivity(send);
+                    finish();
                 }
 				/*
 				 * if user reg test is false on oncreate then redirect the
@@ -53,6 +54,7 @@ public class Splashscreen extends AppCompatActivity {
                     Intent send = new Intent(getApplicationContext(),
                             RegistrationActivity.class);
                     startActivity(send);
+                    finish();
                 }
             }
         }, SPLASH_TIME_OUT);

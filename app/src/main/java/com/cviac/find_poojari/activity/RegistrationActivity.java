@@ -142,6 +142,7 @@ public class RegistrationActivity extends AppCompatActivity {
                             Intent in1 = new Intent(RegistrationActivity.this,
                                     MainActivity.class);
                             startActivity(in1);
+                            finish();
                         }
                     }
                 });

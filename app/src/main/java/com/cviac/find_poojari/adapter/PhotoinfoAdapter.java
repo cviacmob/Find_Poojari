@@ -15,17 +15,17 @@ public class PhotoinfoAdapter extends BaseAdapter {
 
     private Context mContext;
 
-    private List<PhotoInfo> list;
+    private List<PhotoInfo> photos;
 
-    public PhotoinfoAdapter(Context c, List<PhotoInfo> list)
+    public PhotoinfoAdapter(Context c, List<PhotoInfo> photos)
     {
         mContext = c;
-        this.list=list;
+        this.photos=photos;
     }
 
     public int getCount()
     {
-        return list.size();
+        return photos.size();
     }
 
     public Object getItem(int i)
@@ -46,11 +46,11 @@ public class PhotoinfoAdapter extends BaseAdapter {
 
         View pho = view;
         ViewHolder holder;
-        PhotoInfo pinfo=list.get(i);
+        PhotoInfo pinfo=photos.get(i);
 
         if (view == null) {
             LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            pho = new View(mContext);
+//            pho = new View(mContext);
             pho = inflater.inflate(R.layout.photolist_item, null);
             holder = new ViewHolder();
             holder.iv = (ImageView) pho.findViewById(R.id.phimage);

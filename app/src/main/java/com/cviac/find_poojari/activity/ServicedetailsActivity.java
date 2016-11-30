@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.cviac.find_poojari.R;
+import com.cviac.find_poojari.datamodel.ServiceInfo;
 
 public class ServicedetailsActivity extends AppCompatActivity {
     private TextView det;
@@ -27,6 +28,10 @@ public class ServicedetailsActivity extends AppCompatActivity {
         setTitle("Service Details");
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        Intent i = getIntent();
+        final ServiceInfo child = (ServiceInfo) i.getSerializableExtra("Serviceinfo");
+        setTitle(child.getServiceNAME());
 
         det = (TextView) findViewById(R.id.servctxt);
         call = (Button) findViewById(R.id.servccall);

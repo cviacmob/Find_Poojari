@@ -14,7 +14,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/clc"
+        android:src="@mipmap/clck"
         android:layout_toRightOf="@+id/servicetext"
         android:layout_alignTop="@+id/servicetext"
         android:layout_marginLeft="20dp"
