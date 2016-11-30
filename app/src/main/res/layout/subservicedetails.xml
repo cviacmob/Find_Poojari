@@ -13,15 +13,13 @@
         android:layout_gravity="center" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:src="@mipmap/clck"
         android:layout_toRightOf="@+id/servicetext"
-        android:layout_alignTop="@+id/servicetext"
         android:layout_marginLeft="20dp"
         android:layout_marginStart="10dp"
-        android:id="@+id/clickimage"
-        android:layout_alignBottom="@+id/servicetext" />
+        android:id="@+id/clickimage"/>
 
     <TextView
         android:id="@+id/servicetext"
