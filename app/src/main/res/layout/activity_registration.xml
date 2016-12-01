@@ -65,7 +65,9 @@
     <Button
         android:text="Register"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/roundshapebtn"
         android:layout_marginTop="18dp"
         android:padding="5dp"
         android:id="@+id/Registerbutton"

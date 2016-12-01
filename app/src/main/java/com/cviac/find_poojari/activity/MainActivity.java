@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     GridView grid;
     TextView disp;
     ServiceInfo root;
+    Button change;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -154,7 +155,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ch1.add(ch11);
         ServiceInfo ch12 = new ServiceInfo(R.mipmap.upanayan, "UPANAYANAM");
         ch1.add(ch12);
-        ServiceInfo ch13 = new ServiceInfo(R.mipmap.namakaran, "NAMAKARANAM");
+        ServiceInfo ch13 = new ServiceInfo(R.mipmap.namakaran, "NAMAKARANAM(Naming of the Child)");
         ch1.add(ch13);
         ServiceInfo ch14 = new ServiceInfo(R.mipmap.annapras, "ANNAPRASANA");
         ch1.add(ch14);
@@ -168,7 +169,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ch1.add(ch18);
         ServiceInfo ch19 = new ServiceInfo(R.mipmap.ayushhomam, "AYUSH HOMAM ");
         ch1.add(ch19);
-        ServiceInfo ch110 = new ServiceInfo(R.mipmap.abdikam, "MONTHLY /ANNUAL CERMONIES(ABDIKAM)");
+        ServiceInfo ch110 = new ServiceInfo(R.mipmap.abdikam, "ANNUAL CERMONIES(ABDIKAM)");
         ch1.add(ch110);
 
         ServiceInfo ch2 = new ServiceInfo(R.mipmap.poojasv, "POOJAS & VRATALU");
@@ -182,15 +183,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ch2.add(ch23);
         ServiceInfo ch24 = new ServiceInfo(R.mipmap.durga, "DURGA POOJA");
         ch2.add(ch24);
-        ServiceInfo ch25 = new ServiceInfo(R.mipmap.ganeshnav, "GANESH NAVARATRULU");
+        ServiceInfo ch25 = new ServiceInfo(R.mipmap.ganeshnav, "GANESH NAVARATRI");
         ch2.add(ch25);
-        ServiceInfo ch26 = new ServiceInfo(R.mipmap.durga, "DURGA NAVARATRULU");
+        ServiceInfo ch26 = new ServiceInfo(R.mipmap.durga, "DURGA NAVARATRI");
         ch2.add(ch26);
         ServiceInfo ch27 = new ServiceInfo(R.mipmap.navagraha, "NAVAGRAHA SHANTHI");
         ch2.add(ch27);
         ServiceInfo ch28 = new ServiceInfo(R.mipmap.navjapam, "NAVAGRAHA JAPAM");
         ch2.add(ch28);
-        ServiceInfo ch29 = new ServiceInfo(R.mipmap.homam, "HOMALU & ABHISHEKALU");
+        ServiceInfo ch29 = new ServiceInfo(R.mipmap.homam, "HOMAM & ABHISHEKAM");
         ch2.add(ch29);
 
         ServiceInfo ch3 = new ServiceInfo(R.mipmap.astro, "ASTROLOGY/JYOTHISH");
@@ -204,6 +205,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ch3.add(ch33);
         ServiceInfo ch34 = new ServiceInfo(R.mipmap.defa, "MATCHING HOROSCOPES FOR MARRIAGE");
         ch3.add(ch34);
+        ServiceInfo ch35 = new ServiceInfo(R.mipmap.defa, "FIXING LAGNAM FOR MARRIAGE");
+        ch3.add(ch35);
 
         ServiceInfo ch4 = new ServiceInfo(R.mipmap.vaasthu, "VAASTHU");
         root.add(ch4);
@@ -212,13 +215,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ch4.add(ch41);
         ServiceInfo ch42 = new ServiceInfo(R.mipmap.defa, "SUGGEST REMEDIES");
         ch4.add(ch42);
+        ServiceInfo ch43 = new ServiceInfo(R.mipmap.defa, "GIVING PLAN FOR NEW HOUSE");
+        ch4.add(ch43);
 
         ServiceInfo ch5 = new ServiceInfo(R.mipmap.defa, "APARAM");
         root.add(ch5);
 
         ServiceInfo ch51 = new ServiceInfo(R.mipmap.death, "DEATH CEREMONY");
         ch5.add(ch51);
-        ServiceInfo ch52 = new ServiceInfo(R.mipmap.defa, "ALL KARMA KANDALU - 1-12 DAYS CEREMONY ");
+        ServiceInfo ch52 = new ServiceInfo(R.mipmap.defa, "ALL KARMA KANDALU - 1 to 12 DAYS CEREMONY ");
         ch5.add(ch52);
         ServiceInfo ch53 = new ServiceInfo(R.mipmap.abdikam, "MONTHLY /ANNUAL CERMONIES(ABDIKAM)");
         ch5.add(ch53);
@@ -240,9 +245,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ch6.add(ch66);
         ServiceInfo ch67 = new ServiceInfo(R.mipmap.defa, "ARCHAKATVAM");
         ch6.add(ch67);
-        ServiceInfo ch68 = new ServiceInfo(R.mipmap.defa, "CATERING-Small Gathering");
+        ServiceInfo ch68 = new ServiceInfo(R.mipmap.defa, "CATERING");
         ch6.add(ch68);
-        ServiceInfo ch69 = new ServiceInfo(R.mipmap.defa, "CATERING-Large Gathering");
-        ch6.add(ch69);
     }
 }

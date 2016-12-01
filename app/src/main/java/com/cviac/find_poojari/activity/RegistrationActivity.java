@@ -166,7 +166,6 @@ public class RegistrationActivity extends AppCompatActivity {
     }
 
     protected boolean isValidEmail(String email) {
-        // TODO Auto-generated method stub
 
         String EMAILPATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
                 + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";

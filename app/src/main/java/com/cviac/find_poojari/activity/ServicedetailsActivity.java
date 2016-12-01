@@ -25,7 +25,6 @@ public class ServicedetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_servicedetails);
-        setTitle("Service Details");
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -45,7 +44,7 @@ public class ServicedetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent callIntent = new Intent(Intent.ACTION_CALL);
-                callIntent.setData(Uri.parse("tel:8489674524"));
+                callIntent.setData(Uri.parse("tel:" + getString(R.string.callnumber)));
                 if (ActivityCompat.checkSelfPermission(ServicedetailsActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                     ActivityCompat.requestPermissions(ServicedetailsActivity.this, new String[]{Manifest.permission.CALL_PHONE}, MY_PERMISSION_CALL_PHONE);
                     return;
@@ -63,7 +62,7 @@ public class ServicedetailsActivity extends AppCompatActivity {
             case MY_PERMISSION_CALL_PHONE: {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     Intent callIntent = new Intent(Intent.ACTION_CALL);
-                    callIntent.setData(Uri.parse("tel:9676444108"));
+                    callIntent.setData(Uri.parse("tel:" + getString(R.string.callnumber)));
                     if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                         return;
                     }

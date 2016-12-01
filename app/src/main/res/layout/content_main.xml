@@ -14,7 +14,7 @@
             android:id="@+id/gridview12"
             android:layout_below="@+id/disp_city"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:gravity="center"
             android:numColumns="auto_fit"/>
 
@@ -31,8 +31,9 @@
     <ImageButton
         android:layout_width="22dp"
         android:layout_height="wrap_content"
-        android:background="@mipmap/pencilbox"
-        android:id="@+id/imageButton"
+        android:background="@mipmap/pencil"
+        android:paddingRight="10dp"
+        android:id="@+id/changecity"
         android:layout_alignParentRight="true"
         android:layout_alignTop="@+id/disp_city"
         android:layout_alignBottom="@+id/disp_city"/>

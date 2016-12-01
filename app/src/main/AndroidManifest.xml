@@ -34,8 +34,7 @@
         <activity android:name=".activity.ContactActivity" />
         <activity android:name=".activity.SubserviceActivity" />
         <activity android:name=".activity.FullviewActivity" />
-        <activity android:name=".activity.ServicedetailsActivity"></activity>
-
+        <!--<activity android:name=".activity.ServicedetailsActivity"></activity>-->
 
         <receiver android:name=".NetworkStateReceiver">
             <intent-filter>

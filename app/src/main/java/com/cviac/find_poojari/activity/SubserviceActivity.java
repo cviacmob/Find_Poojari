@@ -35,9 +35,9 @@ public class SubserviceActivity extends AppCompatActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                ServiceInfo info= child.getSublist().get(i);
-                Intent det = new Intent(SubserviceActivity.this, ServicedetailsActivity.class);
-                det.putExtra("Serviceinfo",info);
+//                ServiceInfo info= child.getSublist().get(i);
+                Intent det = new Intent(SubserviceActivity.this, ContactActivity.class);
+//                det.putExtra("Serviceinfo",info);
                 startActivity(det);
             }
         });
