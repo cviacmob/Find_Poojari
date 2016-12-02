@@ -75,20 +75,14 @@ public class ContactActivity extends AppCompatActivity {
 
                 if (ename.length() < 1) {
                     ename.setError("Enter name to proceed");
-                    Toast.makeText(getApplicationContext(), "Enter valid Name",
-                            Toast.LENGTH_LONG).show();
                     return;
                 }
                 if (ephone.length() < 9) {
                     ephone.setError("Enter Valid Mobile Number");
-                    Toast.makeText(getApplicationContext(),
-                            "Enter valid Mobile No.", Toast.LENGTH_LONG).show();
-                    return;
+                   return;
                 }
                 if (!isValidEmail(email1)) {
                     email.setError("Enter Valid Email-id to proceed");
-                    Toast.makeText(getApplicationContext(),
-                            "Enter valid E-mail ID", Toast.LENGTH_LONG).show();
                     return;
                 }
                 PoojariApp app = (PoojariApp) ContactActivity.this.getApplication();
