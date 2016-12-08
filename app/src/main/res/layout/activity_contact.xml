@@ -7,7 +7,6 @@
     android:padding="5dp"
     tools:context="com.cviac.find_poojari.activity.ContactActivity">
 
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

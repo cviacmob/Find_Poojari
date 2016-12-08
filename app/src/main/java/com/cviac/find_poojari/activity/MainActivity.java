@@ -34,9 +34,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setTitle("Pooja Services");
         loadServices();
 
-        ServiceinfoAdapter adapter = new ServiceinfoAdapter(MainActivity.this,root.getSublist());
+        ServiceinfoAdapter adapter = new ServiceinfoAdapter(MainActivity.this, root.getSublist());
 
-        String dispcit=Prefs.getString("City","");
+        String dispcit = Prefs.getString("City", "");
         disp = (TextView) findViewById(R.id.disp_city);
         disp.setText(dispcit);
 
@@ -151,7 +151,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ServiceInfo ch1 = new ServiceInfo(R.mipmap.smarta, "SMARTHAM");
         root.add(ch1);
 
-        ServiceInfo ch11 = new ServiceInfo(R.mipmap.marg, "MARRIAGE");
+        ServiceInfo ch11 = new ServiceInfo(R.mipmap.marriagesymbol, "MARRIAGE");
         ch1.add(ch11);
         ServiceInfo ch12 = new ServiceInfo(R.mipmap.upanayan, "UPANAYANAM");
         ch1.add(ch12);
@@ -175,9 +175,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ServiceInfo ch2 = new ServiceInfo(R.mipmap.poojasv, "POOJAS & VRATALU");
         root.add(ch2);
 
-        ServiceInfo ch21 = new ServiceInfo(R.mipmap.satyanarayana, "SATYANARAYANA VRATAM");
+        ServiceInfo ch21 = new ServiceInfo(R.mipmap.satyanarayanavratam, "SATYANARAYANA VRATAM");
         ch2.add(ch21);
-        ServiceInfo ch22 = new ServiceInfo(R.mipmap.varalakshmi, "VARALAKSHMI VRATAM");
+        ServiceInfo ch22 = new ServiceInfo(R.mipmap.vralakshmivratam, "VARALAKSHMI VRATAM");
         ch2.add(ch22);
         ServiceInfo ch23 = new ServiceInfo(R.mipmap.ganapathii, "GANAPATHI POOJA");
         ch2.add(ch23);
@@ -194,12 +194,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ServiceInfo ch29 = new ServiceInfo(R.mipmap.homam, "HOMAM & ABHISHEKAM");
         ch2.add(ch29);
 
-        ServiceInfo ch3 = new ServiceInfo(R.mipmap.astro, "ASTROLOGY/JYOTHISH");
+        ServiceInfo ch3 = new ServiceInfo(R.mipmap.horoscope, "ASTROLOGY/JYOTHISH");
         root.add(ch3);
 
         ServiceInfo ch31 = new ServiceInfo(R.mipmap.defa, "PREPARING HOROSCOPE");
         ch3.add(ch31);
-        ServiceInfo ch32 = new ServiceInfo(R.mipmap.defa, "STUDYING HOROSCOPE");
+        ServiceInfo ch32 = new ServiceInfo(R.mipmap.astrologicalchart, "STUDYING HOROSCOPE");
         ch3.add(ch32);
         ServiceInfo ch33 = new ServiceInfo(R.mipmap.defa, "SUGGEST REMEDIES");
         ch3.add(ch33);
@@ -215,7 +215,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ch4.add(ch41);
         ServiceInfo ch42 = new ServiceInfo(R.mipmap.defa, "SUGGEST REMEDIES");
         ch4.add(ch42);
-        ServiceInfo ch43 = new ServiceInfo(R.mipmap.defa, "GIVING PLAN FOR NEW HOUSE");
+        ServiceInfo ch43 = new ServiceInfo(R.mipmap.houseplan, "GIVING PLAN FOR NEW HOUSE");
         ch4.add(ch43);
 
         ServiceInfo ch5 = new ServiceInfo(R.mipmap.defa, "APARAM");
@@ -233,15 +233,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         ServiceInfo ch61 = new ServiceInfo(R.mipmap.defa, "ALL TEMPLE RELATED POOJALU");
         ch6.add(ch61);
-        ServiceInfo ch62 = new ServiceInfo(R.mipmap.defa, "PRATISHTA");
+        ServiceInfo ch62 = new ServiceInfo(R.mipmap.pratishta, "PRATISHTA");
         ch6.add(ch62);
-        ServiceInfo ch63 = new ServiceInfo(R.mipmap.defa, "KALYANAM");
+        ServiceInfo ch63 = new ServiceInfo(R.mipmap.kalyanam, "KALYANAM");
         ch6.add(ch63);
-        ServiceInfo ch64 = new ServiceInfo(R.mipmap.defa, "BRAHMOTSAVAM");
+        ServiceInfo ch64 = new ServiceInfo(R.mipmap.brahmotsavam, "BRAHMOTSAVAM");
         ch6.add(ch64);
         ServiceInfo ch65 = new ServiceInfo(R.mipmap.defa, "ALAMKARAMS TO DIETTIES");
         ch6.add(ch65);
-        ServiceInfo ch66 = new ServiceInfo(R.mipmap.defa, "YAGNEEKAM - YAGNAM");
+        ServiceInfo ch66 = new ServiceInfo(R.mipmap.yagnam, "YAGNEEKAM - YAGNAM");
         ch6.add(ch66);
         ServiceInfo ch67 = new ServiceInfo(R.mipmap.defa, "ARCHAKATVAM");
         ch6.add(ch67);

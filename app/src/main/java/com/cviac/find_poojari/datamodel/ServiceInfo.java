@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ServiceInfo implements Serializable{
+public class ServiceInfo implements Serializable {
 
     private int imgID;
 
@@ -15,7 +15,7 @@ public class ServiceInfo implements Serializable{
     public ServiceInfo(int imgID, String serviceNAME) {
         this.imgID = imgID;
         this.serviceNAME = serviceNAME;
-        sublist =new ArrayList<ServiceInfo>();
+        sublist = new ArrayList<ServiceInfo>();
     }
 
     public int getImgID() {
@@ -34,13 +34,11 @@ public class ServiceInfo implements Serializable{
         this.serviceNAME = serviceNAME;
     }
 
-   public void add(ServiceInfo sinfo)
-   {
-       sublist.add(sinfo);
-   }
+    public void add(ServiceInfo sinfo) {
+        sublist.add(sinfo);
+    }
 
-    public List<ServiceInfo> getSublist()
-    {
+    public List<ServiceInfo> getSublist() {
         return sublist;
     }
 }

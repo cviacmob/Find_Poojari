@@ -5,19 +5,17 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Switch;
 import android.widget.Toast;
 
 import com.cviac.find_poojari.PoojariApp;
-import com.cviac.find_poojari.Prefs;
 import com.cviac.find_poojari.R;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -79,7 +77,7 @@ public class ContactActivity extends AppCompatActivity {
                 }
                 if (ephone.length() < 9) {
                     ephone.setError("Enter Valid Mobile Number");
-                   return;
+                    return;
                 }
                 if (!isValidEmail(email1)) {
                     email.setError("Enter Valid Email-id to proceed");
@@ -97,7 +95,7 @@ public class ContactActivity extends AppCompatActivity {
         });
     }
 
-    private void enquiry(String name, String mobile_number, String email, String message) {
+    private void enquiry(final String name, final String mobile_number, final String email, final String message) {
 
         Map<String, Object> updateValues = new HashMap<>();
         updateValues.put("name", name);
@@ -130,11 +128,27 @@ public class ContactActivity extends AppCompatActivity {
                                     Toast.LENGTH_LONG).show();
                         } else {
                             Toast.makeText(getApplicationContext(),
-                                    "Submit Successful", Toast.LENGTH_LONG).show();
+                                    "Enquiry Submitted Successfully", Toast.LENGTH_LONG).show();
+                            String msgBody = getMessagebody(name, email, mobile_number, message);
+
+                            PoojariApp app = (PoojariApp) getApplicationContext();
+
+                            app.sendEmail("gunaseelan240@gmail.com", "Contact Us", msgBody);
                             finish();
                         }
                     }
                 });
+    }
+
+    private String getMessagebody(String Name, String Emailid, String mobilenumber, String msg) {
+
+        StringBuilder msgBody = new StringBuilder();
+        msgBody.append("Name:" + Name + "\n");
+        msgBody.append("Email:" + Emailid + "\n");
+        msgBody.append("Mobile Number:" + mobilenumber + "\n");
+        msgBody.append("Message:" + msg + "\n");
+
+        return msgBody.toString();
     }
 
     @Override

@@ -6,84 +6,86 @@
     android:layout_height="match_parent"
     android:padding="5dp"
     tools:context="com.cviac.find_poojari.activity.RegistrationActivity">
+
     <android.support.design.widget.TextInputLayout
+        android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:padding="5dp"
-        android:id="@+id/name">
+        android:padding="5dp">
 
         <EditText
             android:id="@+id/namebox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
-            android:hint="Name" />
+            android:hint="Name"
+            android:inputType="text" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:padding="5dp"
         android:id="@+id/phone"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/name">
+        android:layout_below="@+id/name"
+        android:padding="5dp">
 
         <EditText
             android:id="@+id/phonebox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
-            android:hint="Mobile Number" />
+            android:hint="Mobile Number"
+            android:inputType="number" />
     </android.support.design.widget.TextInputLayout>
+
     <android.support.design.widget.TextInputLayout
+        android:id="@+id/mail"
         android:layout_width="match_parent"
-        android:padding="5dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/phone"
-        android:id="@+id/mail">
+        android:padding="5dp">
 
         <EditText
             android:id="@+id/mailbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:hint="E-Mail ID" />
+            android:hint="E-Mail ID"
+            android:inputType="textEmailAddress" />
     </android.support.design.widget.TextInputLayout>
 
     <TextView
-        android:text="City"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:id="@+id/textView"
-        android:textSize="17sp"
         android:layout_below="@+id/mail"
+        android:layout_marginStart="5dp"
         android:layout_marginTop="18dp"
-        android:layout_marginStart="5dp" />
+        android:padding="5dp"
+        android:text="City"
+        android:textSize="17sp" />
 
     <Button
-        android:text="Register"
+        android:id="@+id/Registerbutton"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:textColor="#FFFFFF"
-        android:background="@drawable/roundshapebtn"
-        android:layout_marginTop="18dp"
-        android:padding="5dp"
-        android:id="@+id/Registerbutton"
         android:layout_below="@+id/spinner1"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/roundshapebtn"
+        android:padding="5dp"
+        android:text="Register"
+        android:textColor="#FFFFFF" />
 
     <Spinner
+        android:id="@+id/spinner1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:id="@+id/spinner1"
-        android:layout_toRightOf="@+id/textView"
-        android:layout_alignTop="@+id/textView"
         android:layout_alignBottom="@+id/textView"
-        android:layout_marginLeft="10dp"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignTop="@+id/textView"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/textView"
+        android:padding="5dp" />
 
 </RelativeLayout>

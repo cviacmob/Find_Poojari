@@ -54,7 +54,6 @@ public class RegistrationActivity extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, arraySpinnervalues);
         s.setAdapter(adapter);
         s.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int position, long id) {
@@ -103,7 +102,6 @@ public class RegistrationActivity extends AppCompatActivity {
 
                     if (app.isNetworkStatus()) {
 
-
                         Prefs.edit();
                         Prefs.putString("Name", name1);
                         Prefs.putString("Mobile Number", phone1);
@@ -119,6 +117,10 @@ public class RegistrationActivity extends AppCompatActivity {
             }
         });
     }
+
+//    public void msgBody(String name1, String phone1, String mail1, String city) {
+//
+//    }
 
     private void registeruser(String name, String mobile_number, String email, final String city) {
 
@@ -153,9 +155,11 @@ public class RegistrationActivity extends AppCompatActivity {
                         } else {
                             Toast.makeText(getApplicationContext(),
                                     "Registeration Successful", Toast.LENGTH_LONG).show();
-
                             Prefs.putString("isregistered", "true");
 
+                            PoojariApp app = (PoojariApp) getApplicationContext();
+
+                            app.sendEmail("gunaseelan240@gmail.com", "registration", getMessagebody());
                             Intent in1 = new Intent(RegistrationActivity.this,
                                     MainActivity.class);
                             startActivity(in1);
@@ -163,6 +167,17 @@ public class RegistrationActivity extends AppCompatActivity {
                         }
                     }
                 });
+    }
+
+    private String getMessagebody() {
+
+        StringBuilder msgBody = new StringBuilder();
+        msgBody.append("Name:" + Prefs.getString("Name", "") + "\n");
+        msgBody.append("Mobile:" + Prefs.getString("Mobile Number", "") + "\n");
+        msgBody.append("Email:" + Prefs.getString("Email", "") + "\n");
+        msgBody.append("City:" + Prefs.getString("City", "") + "\n");
+
+        return msgBody.toString();
     }
 
     protected boolean isValidEmail(String email) {

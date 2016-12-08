@@ -72,5 +72,7 @@ public class PhotosActivity extends AppCompatActivity implements AdapterView.OnI
         photolist.add(inf9);
         PhotoInfo inf10 = new PhotoInfo(R.mipmap.ten);
         photolist.add(inf10);
+        PhotoInfo inf11 = new PhotoInfo(R.mipmap.photolist);
+        photolist.add(inf11);
     }
 }
