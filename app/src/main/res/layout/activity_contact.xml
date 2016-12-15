@@ -166,7 +166,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:background="@mipmap/calll"
+        android:background="@mipmap/xyz"
         android:gravity="bottom" />
 
 </RelativeLayout>

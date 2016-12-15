@@ -118,10 +118,6 @@ public class RegistrationActivity extends AppCompatActivity {
         });
     }
 
-//    public void msgBody(String name1, String phone1, String mail1, String city) {
-//
-//    }
-
     private void registeruser(String name, String mobile_number, String email, final String city) {
 
         Map<String, Object> updateValues = new HashMap<>();
@@ -159,7 +155,7 @@ public class RegistrationActivity extends AppCompatActivity {
 
                             PoojariApp app = (PoojariApp) getApplicationContext();
 
-                            app.sendEmail("gunaseelan240@gmail.com", "registration", getMessagebody());
+                            app.sendEmail("info@findpoojari.com", "Registration", getMessagebody());
                             Intent in1 = new Intent(RegistrationActivity.this,
                                     MainActivity.class);
                             startActivity(in1);
@@ -172,10 +168,10 @@ public class RegistrationActivity extends AppCompatActivity {
     private String getMessagebody() {
 
         StringBuilder msgBody = new StringBuilder();
-        msgBody.append("Name:" + Prefs.getString("Name", "") + "\n");
-        msgBody.append("Mobile:" + Prefs.getString("Mobile Number", "") + "\n");
-        msgBody.append("Email:" + Prefs.getString("Email", "") + "\n");
-        msgBody.append("City:" + Prefs.getString("City", "") + "\n");
+        msgBody.append("Name: " + Prefs.getString("Name", "") + "\n");
+        msgBody.append("Mobile: " + Prefs.getString("Mobile Number", "") + "\n");
+        msgBody.append("Email: " + Prefs.getString("Email", "") + "\n");
+        msgBody.append("City: " + Prefs.getString("City", "") + "\n");
 
         return msgBody.toString();
     }

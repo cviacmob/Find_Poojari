@@ -133,7 +133,7 @@ public class ContactActivity extends AppCompatActivity {
 
                             PoojariApp app = (PoojariApp) getApplicationContext();
 
-                            app.sendEmail("gunaseelan240@gmail.com", "Contact Us", msgBody);
+                            app.sendEmail("info@findpoojari.com", "Contact Us", msgBody);
                             finish();
                         }
                     }
@@ -143,10 +143,10 @@ public class ContactActivity extends AppCompatActivity {
     private String getMessagebody(String Name, String Emailid, String mobilenumber, String msg) {
 
         StringBuilder msgBody = new StringBuilder();
-        msgBody.append("Name:" + Name + "\n");
-        msgBody.append("Email:" + Emailid + "\n");
-        msgBody.append("Mobile Number:" + mobilenumber + "\n");
-        msgBody.append("Message:" + msg + "\n");
+        msgBody.append("Name: " + Name + "\n");
+        msgBody.append("Email: " + Emailid + "\n");
+        msgBody.append("Mobile Number: " + mobilenumber + "\n");
+        msgBody.append("Message: " + msg + "\n");
 
         return msgBody.toString();
     }

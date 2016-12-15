@@ -1,8 +1,8 @@
 package com.cviac.find_poojari;
 
-import retrofit.Call;
-import retrofit.http.Body;
-import retrofit.http.POST;
+        import retrofit.Call;
+        import retrofit.http.Body;
+        import retrofit.http.POST;
 
 public interface CVIACApi {
 
